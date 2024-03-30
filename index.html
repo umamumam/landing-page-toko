@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lancar Manunggal</title>
+    <link href="asset/img/logo1.png" rel="icon" />
+    <link href="asset/img/logo1.png" rel="apple-touch-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Load Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="asset/img/logo.png" alt="" />
+        <h1>Lancar Manunggal</h1>
+      </div>
+      <div class="hamburger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="navbar" id="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#produk">Produk</a></li>
+          <li><a href="#kontak">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div id="home" class="row">
+        <img src="asset/img/welcome.png" alt="" width="1500px" />
+        <img src="asset/img/sosis.png" alt="" width="1500px" />
+        <img src="asset/img/toko.png" alt="" width="1500px" />
+      </div>
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <main>
+      <div id="content">
+        <artricle id="profil" class="card">
+          <h2>Profile</h2>
+          <img src="asset/img/toko.png" alt="" width="1200px" />
+          <p align="justify">
+            "Agen Sosis Lancar Manunggal adalah sebuah perusahaan yang berlokasi
+            di Desa Ngablak, yang tidak hanya menawarkan berbagai jenis sosis
+            berkualitas, tetapi juga menyediakan sejumlah produk makanan lainnya
+            seperti scallop, nugget, tempura, kaki naga, bakso, dan masih banyak
+            lagi. Selain itu, kami juga menjadi pilihan utama untuk memenuhi
+            kebutuhan pop ice dalam beragam varian rasa, serta menyediakan
+            segala kebutuhan plastik dan cup es batu. Kami berkomitmen untuk
+            memberikan pelayanan terbaik dan produk berkualitas tinggi kepada
+            pelanggan kami, sehingga setiap kunjungan menjadi pengalaman yang
+            memuaskan dan tak terlupakan."
+          </p>
+        </artricle>
+
+        <article id="produk" class="card">
+          <br />
+          <h1 align="center">Produk</h1>
+          <div class="container">
+            <article class="card">
+              <img src="asset/img/sosiso.jpg" alt="" />
+              <div class="card-info">
+                <h3>Sosis</h3>
+              </div>
+            </article>
+            <article class="card">
+              <img src="asset/img/nugget.png" alt="" />
+              <div class="card-info">
+                <h3>Nugget</h3>
+              </div>
+            </article>
+            <article class="card">
+              <img src="asset/img/bakso.jpg" alt="" />
+              <div class="card-info">
+                <h3>Bakso</h3>
+              </div>
+            </article>
+            <article class="card">
+              <img src="asset/img/scallop.jpeg" alt="" />
+              <div class="card-info">
+                <h3>Scallop</h3>
+              </div>
+            </article>
+            <article class="card">
+              <img src="asset/img/tempura.jpeg" alt="" />
+              <div class="card-info">
+                <h3>Tempura</h3>
+              </div>
+            </article>
+            <article class="card">
+              <img src="asset/img/es.jpg" alt="" />
+              <div class="card-info">
+                <h3>Es</h3>
+              </div>
+            </article>
+            <article class="card">
+              <img src="asset/img/cup.jpg" alt="" />
+              <div class="card-info">
+                <h3>Cup & Plastik</h3>
+              </div>
+            </article>
+            <article class="card">
+              <img src="asset/img/saos.jpeg" alt="" />
+              <div class="card-info">
+                <h3>Saos & Kecap</h3>
+              </div>
+            </article>
+            <article class="card">
+              <img src="asset/img/mayo.jpeg" alt="" />
+              <div class="card-info">
+                <h3>Mayonaise</h3>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <article id="kontak" class="card">
+          <br />
+          <br />
+          <h2 align="center">Contact Us</h2>
+          <hr />
+          <div class="container">
+            <!-- Card Alamat -->
+            <article class="card">
+              <div class="card-info">
+                <h4>Alamat</h4>
+                <p class="address-icon">
+                  Jl.Pati Jepara Km 7 Kec.Cluwak Kab.Pati
+                </p>
+              </div>
+            </article>
+
+            <!-- Card WA -->
+            <article class="card">
+              <div class="card-info">
+                <h4>WA</h4>
+                <p class="whatsapp-icon">
+                  <a href="whatsapp://send?phone=+6285201454015"
+                    >085201454015</a
+                  >
+                </p>
+              </div>
+            </article>
+
+            <!-- Card Email -->
+            <article class="card">
+              <div class="card-info">
+                <h4>Email</h4>
+                <p class="email-icon">sosis@lancarmanunggal.com</p>
+              </div>
+            </article>
+
+            <!-- Card Open Hours -->
+            <article class="card">
+              <div class="card-info">
+                <h4>Open Hours</h4>
+                <p class="jam-icon">Buka Setiap Hari</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Maps -->
+
+          <h3 align="center">LOKASI</h3>
+          <div id="map"></div>
+
+          <script>
+            var map = L.map("map").setView(
+              [-6.5346485473601605, 110.98404605326803],
+              15
+            );
+            L.tileLayer(
+              "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+              {}
+            ).addTo(map);
+          </script>
+        </article>
+      </div>
+
+      <!--Konten Samping-->
+      <aside>
+        <article>
+          <article class="profile" class="card">
+            <h3 align="center">Agen Sosis</h3>
+            <h3 align="center">Lancar Manunggal</h3>
+            <figure align="center">
+              <img src="asset/img/logo.png" />
+              <figcaption align="center">Logo</figcaption>
+            </figure>
+
+            <section>
+              <h3 align="center">Informasi lainnya</h3>
+              <table align="center">
+                <tr>
+                  <th>Lokasi</th>
+                  <td>Desa Ngablak</td>
+                </tr>
+                <tr>
+                  <th>Sejak</th>
+                  <td>2010</td>
+                </tr>
+                <tr>
+                  <th>WA</th>
+                  <td>085201454015</td>
+                </tr>
+                <tr>
+                  <th>Penjual</th>
+                  <td>Subekan & Rubiyati</td>
+                </tr>
+              </table>
+            </section>
+          </article>
+        </article>
+      </aside>
+    </main>
+    <footer>
+      <p>
+        &copy; Copyright <strong><span>mfthlmm</span></strong
+        >. All Rights Reserved
+      </p>
+    </footer>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var images = document.querySelectorAll("#home img");
+    var index = 0;
+    images[0].style.display = "block";
+
+    function showNextImage() {
+      images[index].style.display = "none";
+      index = (index + 1) % images.length;
+      images[index].style.display = "block";
+    }
+
+    function showPrevImage() {
+      images[index].style.display = "none";
+      index = (index - 1 + images.length) % images.length;
+      images[index].style.display = "block";
+    }
+
+    setInterval(showNextImage, 7000);
+  });
+
+  function prevSlide() {
+    showPrevImage();
+  }
+
+  function nextSlide() {
+    showNextImage();
+  }
+</script>
+<script>
+  function toggleMenu() {
+    var navbar = document.getElementById("navbar");
+    navbar.classList.toggle("active");
+  }
+
+  document
+    .querySelector(".hamburger-menu")
+    .addEventListener("click", function () {
+      toggleMenu();
+    });
+</script>
+<!-- WhatsApp Popup -->
+<div class="whatsapp-popup" id="whatsappPopup" onclick="openWhatsApp()">
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+    alt="WhatsApp"
+  />
+</div>
+
+<script>
+  function openWhatsApp() {
+    var phoneNumber = "6285799352991";
+    var message = "Halo, saya ingin bertanya tentang...";
+
+    var url =
+      "https://api.whatsapp.com/send?phone=" +
+      phoneNumber +
+      "&text=" +
+      encodeURIComponent(message);
+    window.open(url, "_blank");
+  }
+
+  function hideWhatsAppPopup() {
+    var whatsappPopup = document.getElementById("whatsappPopup");
+    whatsappPopup.classList.add("hidden");
+  }
+</script>

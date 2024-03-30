@@ -1,0 +1,486 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+h2,
+h3,
+h4 {
+  color: #00a2c6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  padding: 20px;
+}
+#home {
+  margin-top: 90px;
+  position: relative;
+}
+
+#home img {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: blue;
+}
+
+.navbar ul li a:active {
+  color: darkblue;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+/* Show menu on small screens */
+@media only screen and (max-width: 768px) {
+  .navbar.active {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar.active ul li {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+#profil {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#profil h2 {
+  color: #333;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+
+#profil img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+#profil p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  text-align: justify;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#produk .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  #produk .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#produk .card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Gaya untuk gambar dalam artikel produk */
+#produk .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Gaya untuk informasi tambahan dalam artikel produk */
+#produk .card-info {
+  padding: 10px;
+}
+
+/* Gaya untuk judul artikel */
+#produk h1 {
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+
+/* Gaya untuk judul dalam card-info */
+#produk .card-info h3 {
+  color: #00a2c6;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* CSS untuk card */
+#kontak .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+/* CSS untuk card */
+#kontak .card {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS untuk info-box */
+#kontak .info-box {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#kontak .card-info h4 {
+  color: #00a2c6;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#kontak .card-info p {
+  margin: 0;
+}
+
+/* CSS untuk judul di dalam info-box */
+#kontak .info-box h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* CSS untuk konten peta */
+#kontak #map {
+  height: 400px;
+  border-radius: 8px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* CSS untuk ikon */
+#kontak .card-info h4::before {
+  margin-right: 10px;
+}
+
+.address-icon::before {
+  content: "\1F4CD";
+  margin-right: 5px;
+}
+
+.whatsapp-icon::before {
+  content: "\260E";
+  margin-right: 5px;
+}
+
+.email-icon::before {
+  content: "\1F4E7";
+  margin-right: 5px;
+}
+
+.jam-icon::before {
+  content: "\231A";
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  #kontak .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #kontak .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  #kontak #map {
+    width: 90%;
+  }
+}
+
+aside {
+  flex: 1;
+  width: 30%;
+}
+
+.profile {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.profile img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: gray;
+  color: #fff;
+}
+
+/* Media queries untuk responsif */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .navbar ul li {
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .navbar ul li a {
+    font-size: 14px;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+main {
+  padding: 20px;
+
+  display: flex;
+  gap: 1.5rem;
+}
+
+#content {
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+  main aside {
+    align-self: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+  main aside {
+    align-self: stretch;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.whatsapp-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: green;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.whatsapp-popup img {
+  width: 50%;
+  height: 50%;
+}
+
+.whatsapp-popup:hover {
+  background-color: darkgreen;
+}
+
+.whatsapp-popup.hidden {
+  display: none;
+}
